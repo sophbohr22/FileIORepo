@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 namespace FileIOActivity
 {
@@ -10,7 +11,7 @@ namespace FileIOActivity
         {
             Console.WriteLine("What File?");
             string path = Console.ReadLine();
-            ArrayList numbers = new ArrayList();
+            List<int> numbers = new List<int>();
 
             if (File.Exists(path)){
                 using (StreamReader sr = File.OpenText(path)){
