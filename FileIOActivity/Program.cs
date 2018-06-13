@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 namespace FileIOActivity
 {
@@ -10,7 +11,7 @@ namespace FileIOActivity
         {
             Console.WriteLine("What File?");
             string path = Console.ReadLine();
-            ArrayList numbers = new ArrayList();
+            List<int> numbers = new List<int>();
 
             if (File.Exists(path)){
                 using (StreamReader sr = File.OpenText(path)){
@@ -21,9 +22,19 @@ namespace FileIOActivity
                 }
 
             }
-            foreach (int i in numbers){
+
+            foreach (int i in numbers) {
                 Console.WriteLine(i);//displaying all items in the arraylist
             }
+
+            int sum = 0;
+
+            //this for each loop adds all the numbers together
+            foreach(int i in numbers) {
+                sum = sum + i;
+            }
+
+            Console.WriteLine("The sum of all the numbers is: " + sum);
 
             Console.ReadKey();
             //file spot: 
