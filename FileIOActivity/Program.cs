@@ -24,9 +24,17 @@ namespace FileIOActivity
             foreach (int i in numbers){
                 Console.WriteLine(i);//displaying all items in the arraylist
             }
+            //everyOdd
+            Console.WriteLine("Every Odd:");
+            foreach (int i in numbers){
+                if(i%2 == 1){
+                    Console.WriteLine(i);
+                }
+            }
 
             Console.ReadKey();
-            //file spot: 
+            
+
         }
     }
 }
