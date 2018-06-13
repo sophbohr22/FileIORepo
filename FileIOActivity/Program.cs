@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 namespace FileIOActivity
 {
@@ -10,7 +11,7 @@ namespace FileIOActivity
         {
             Console.WriteLine("What File?");
             string path = Console.ReadLine();
-            ArrayList numbers = new ArrayList();
+            List<int> numbers = new List<int>();
 
             if (File.Exists(path)){
                 using (StreamReader sr = File.OpenText(path)){
@@ -20,13 +21,50 @@ namespace FileIOActivity
                     }
                 }
 
-            }
-            foreach (int i in numbers){
-                Console.WriteLine(i);//displaying all items in the arraylist
+            }else{
+                Console.WriteLine("Error. File not found.");
             }
 
+            foreach (int i in numbers) {
+                Console.WriteLine(i);//displaying all items in the arraylist
+            }
+            //everyOdd
+            Console.WriteLine("Every Odd:");
+            foreach (int i in numbers){
+                if(i%2 == 1){
+                    Console.WriteLine(i);
+                }
+            }
+
+            int sum = 0;
+
+            //this for each loop adds all the numbers together
+            foreach(int i in numbers) {
+                sum = sum + i;
+            }
+
+            Console.WriteLine("The sum of all the numbers is: " + sum);
+
+            //divisible by 3
+            Console.WriteLine("Numbers divisible by 3: ");
+            foreach (int i in numbers){
+                if(i%3 == 0){
+                    Console.WriteLine(i);
+                }
+            }
+
+            
+            Console.WriteLine("Every Fifth:");
+           int count = 0;
+           foreach (int i in numbers){
+               count++;
+                if(count%5 == 0){
+                    Console.WriteLine(i);
+                }
+           }
             Console.ReadKey();
-            //file spot: 
+            
+
         }
     }
 }
