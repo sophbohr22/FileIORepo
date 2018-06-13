@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
-using System.Collections;
 
 namespace FileIOActivity
 {
@@ -16,14 +15,14 @@ namespace FileIOActivity
             if (File.Exists(path)){
                 using (StreamReader sr = File.OpenText(path)){
                     string s = "";
-                    while ((s = sr.ReadLine()) != null){
-                        numbers.Add(Int32.Parse(s));
+                    while ((s = sr.ReadLine()) != null){//while items still exist in the file
+                        numbers.Add(Int32.Parse(s));//adds to array list and casts string to an int
                     }
                 }
 
             }
             foreach (int i in numbers){
-                Console.WriteLine(i);
+                Console.WriteLine(i);//displaying all items in the arraylist
             }
 
             Console.ReadKey();
