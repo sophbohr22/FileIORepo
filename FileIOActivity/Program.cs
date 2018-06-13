@@ -21,9 +21,19 @@ namespace FileIOActivity
                 }
 
             }
-            foreach (int i in numbers){
+
+            foreach (int i in numbers) {
                 Console.WriteLine(i);//displaying all items in the arraylist
             }
+
+            int sum = 0;
+
+            //this for each loop adds all the numbers together
+            foreach(int i in numbers) {
+                sum = sum + i;
+            }
+
+            Console.WriteLine("The sum of all the numbers is: " + sum);
 
             Console.ReadKey();
             //file spot: 
