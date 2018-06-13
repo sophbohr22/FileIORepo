@@ -45,6 +45,14 @@ namespace FileIOActivity
 
             Console.WriteLine("The sum of all the numbers is: " + sum);
 
+            //divisible by 3
+            Console.WriteLine("Numbers divisible by 3: ");
+            foreach (int i in numbers){
+                if(i%3 == 0){
+                    Console.WriteLine(i);
+                }
+            }
+
             
             Console.WriteLine("Every Fifth:");
            int count = 0;
