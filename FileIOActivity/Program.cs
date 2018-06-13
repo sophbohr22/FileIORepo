@@ -21,10 +21,19 @@ namespace FileIOActivity
                     }
                 }
 
+            }else{
+                Console.WriteLine("Error. File not found.");
             }
 
             foreach (int i in numbers) {
                 Console.WriteLine(i);//displaying all items in the arraylist
+            }
+            //everyOdd
+            Console.WriteLine("Every Odd:");
+            foreach (int i in numbers){
+                if(i%2 == 1){
+                    Console.WriteLine(i);
+                }
             }
 
             int sum = 0;
@@ -37,7 +46,8 @@ namespace FileIOActivity
             Console.WriteLine("The sum of all the numbers is: " + sum);
 
             Console.ReadKey();
-            //file spot: 
+            
+
         }
     }
 }
