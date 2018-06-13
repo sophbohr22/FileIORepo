@@ -53,6 +53,15 @@ namespace FileIOActivity
                 }
             }
 
+            
+            Console.WriteLine("Every Fifth:");
+           int count = 0;
+           foreach (int i in numbers){
+               count++;
+                if(count%5 == 0){
+                    Console.WriteLine(i);
+                }
+           }
             Console.ReadKey();
             
 
