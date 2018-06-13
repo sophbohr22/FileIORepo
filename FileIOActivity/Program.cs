@@ -64,12 +64,18 @@ namespace FileIOActivity
            }
             //everyEven 
             Console.WriteLine("Every Even:");
-            foreach (int i in numbers)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
+            foreach (int i in numbers)
+
+            {
+
+                if (i % 2 == 0)
+
+                {
+
+                    Console.WriteLine(i);
+
+                }
+
             }
 
 
