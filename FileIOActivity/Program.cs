@@ -62,6 +62,23 @@ namespace FileIOActivity
                     Console.WriteLine(i);
                 }
            }
+            //everyEven 
+            Console.WriteLine("Every Even:");
+            foreach (int i in numbers)
+
+            {
+
+                if (i % 2 == 0)
+
+                {
+
+                    Console.WriteLine(i);
+
+                }
+
+            }
+
+
             Console.ReadKey();
             
 
