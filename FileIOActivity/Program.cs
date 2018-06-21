@@ -38,7 +38,7 @@ namespace FileIOActivity
                 Console.WriteLine(" (3) Display all numbers within the file");
                 Console.WriteLine(" (4) Display every even number in the file");
                 Console.WriteLine(" (5) Display the nubmers divisable by three");
-                Console.WriteLine(" (6) Display every fifth5 number");
+                Console.WriteLine(" (6) Display every fifth number");
                 Console.WriteLine(" (7) Quit application");
                 choice = Int32.Parse(Console.ReadLine());
                 switch(choice)
